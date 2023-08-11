@@ -1,0 +1,240 @@
+<header class="relative isolate pt-16">
+  <div class="absolute overflow-hidden inset-0 -z-10" aria-hidden="true">
+    <div class="transform-gpu blur-3xl">
+      <div class="relative left-[calc(50%-3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80aa] to-[#fcaa89] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+    </div>
+    <div class="absolute inset-x-0 bottom-0 h-px bg-stone-900/5"></div>
+  </div>
+
+  <div class="mx-auto max-w-7xl px-4 sm:px-6  lg:px-8">
+    <div class="flex py-5">
+      <a class="group flex font-semibold text-sm leading-6 text-stone-700 hover:text-stone-900 dark:text-stone-200 dark:hover:text-white" href="#">
+        <svg viewBox="0 -9 3 24" class="overflow-visible mr-3 text-stone-400 w-auto h-6 group-hover:text-stone-600 dark:group-hover:text-stone-300">
+          <path d="M3 0L0 3L3 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        Back
+      </a>
+    </div>
+    <div class="mx-auto max-w-2xl flex justify-between items-center gap-x-8 pb-10 lg:mx-0 lg:max-w-none">
+      <div class="flex items-center gap-6 overflow-hidden">
+        <img src="https://tailwindui.com/img/logos/48x48/tuple.svg" alt="" class="w-16 h-16 rounded-full flex-none ring-1 ring-stone-900/10">
+        <div class="overflow-hidden">
+          <p class="text-sm leading-6	text-stone-500">Order <span class="text-stone-700">#00011</span></p>
+          <h1 class="mt-1 text-base font-semibold text-stone-900 tracking-tight text-ellipsis overflow-hidden">Tuple, Inc</h1>
+        </div>
+      </div>
+      <div class="flex-none flex items-center gap-4 sm:gap-6">
+        <button type="button" class="hidden text-sm font-semibold leading-6 text-stone-900 sm:block">
+          <%= t("cancel") %>
+        </button>
+        <button type="button" class="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-fuchsia-600 text-sm font-semibold text-white shadow-sm hover:bg-fuchsia-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fuchsia-600">
+          <%= t("confirm") %>
+        </button>
+        <details data-controller="details" class="relative sm:hidden" data-action="click@document->details#hide">
+          <summary class="cursor-pointer block rounded-full -m-3 p-3 text-stone-500 hover:bg-white">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+              <path d="M10 3a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM10 8.5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zM11.5 15.5a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0z" />
+            </svg>
+          </summary>
+          <ul role="list" class="absolute right-0 mt-1 rounded-2xl bg-white p-1 shadow-lg shadow-stone-200/80 ring-1 ring-stone-900/5">
+            <li class="rounded-xl px-3 py-1 text-sm text-stone-500 hover:bg-stone-50 hover:text-stone-700">
+              <a class="flex items-center gap-2 block" href="">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="-ml-1 w-4 h-4">
+                  <path d="M2.695 14.763l-1.262 3.154a.5.5 0 00.65.65l3.155-1.262a4 4 0 001.343-.885L17.5 5.5a2.121 2.121 0 00-3-3L3.58 13.42a4 4 0 00-.885 1.343z" />
+                </svg>
+                <%= t("edit") %>
+              </a>
+            </li>
+            <li class="rounded-xl px-3 py-1 text-sm text-rose-500 hover:bg-rose-50 hover:text-rose-700">
+              <%= button_to "", method: :delete, form_class: "", class: "w-full flex items-center gap-2" do %>
+              <span class="-ml-1 group-disabled:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                  <path d="M2 3a1 1 0 00-1 1v1a1 1 0 001 1h16a1 1 0 001-1V4a1 1 0 00-1-1H2z" />
+                  <path fill-rule="evenodd" d="M2 7.5h16l-.811 7.71a2 2 0 01-1.99 1.79H4.802a2 2 0 01-1.99-1.79L2 7.5zM7 11a1 1 0 011-1h4a1 1 0 110 2H8a1 1 0 01-1-1z" clip-rule="evenodd" />
+                </svg>
+              </span>
+                <span class="group-disabled:hidden"><%= t("archive") %><span class="sr-only">, #00011</span></span>
+                <span class="p-2 hidden group-disabled:inline">
+                <svg class="motion-reduce:hidden animate-spin h-5 w-5 text-stone-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+              </span>
+              <% end %>
+            </li>
+          </ul>
+        </details>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="relative py-16 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-2xl grid grid-cols-1 grid-rows-1 items-start gap-x-8 gap-y-8 items-start lg:max-w-none lg:mx-0 lg:grid-cols-3">
+    <div class="rounded-3xl bg-stone-50 shadow-sm ring-1 ring-stone-900/5">
+      <h2 class="sr-only"><%= t("summary") %></h2>
+      <dl class="flex flex-wrap">
+        <div class="px-6 pt-6 flex-auto">
+          <dt class="text-sm font-semibold leading-6"><%= t("amount") %></dt>
+          <dd class="mt-1 text-base font-semibold leading-6 text-stone-900">$10,560.00</dd>
+        </div>
+        <div class="flex-none self-end px-6 pt-4">
+          <dt class="sr-only"><%= t("status") %></dt>
+          <dd class="relative rounded-full px-2 py-1 text-xs font-medium ring-1 ring-inset bg-lime-50 text-lime-600 ring-lime-600/10 hover:ring-lime-600/20">Paid</dd>
+        </div>
+        <div class="px-6 pt-6 mt-6 border-t border-stone-900/5 flex w-full flex-none gap-4">
+          <dt class="flex-none">
+            <span class="sr-only">Customer</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-6 fill-stone-400">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-5.5-2.5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zM10 12a5.99 5.99 0 00-4.793 2.39A6.483 6.483 0 0010 16.5a6.483 6.483 0 004.793-2.11A5.99 5.99 0 0010 12z" clip-rule="evenodd" />
+            </svg>
+          </dt>
+          <dd class="text-sm leading-6 font-medium text-stone-900">Alex Curren</dd>
+        </div>
+        <div class="mt-4 flex w-full flex-none gap-4 px-6">
+          <dt class="flex-none">
+            <span class="sr-only">Customer</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-6 fill-stone-400" aria-hidden="true">
+              <path d="M5.25 12a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H6a.75.75 0 01-.75-.75V12zM6 13.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V14a.75.75 0 00-.75-.75H6zM7.25 12a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H8a.75.75 0 01-.75-.75V12zM8 13.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V14a.75.75 0 00-.75-.75H8zM9.25 10a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H10a.75.75 0 01-.75-.75V10zM10 11.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V12a.75.75 0 00-.75-.75H10zM9.25 14a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H10a.75.75 0 01-.75-.75V14zM12 9.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V10a.75.75 0 00-.75-.75H12zM11.25 12a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H12a.75.75 0 01-.75-.75V12zM12 13.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V14a.75.75 0 00-.75-.75H12zM13.25 10a.75.75 0 01.75-.75h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H14a.75.75 0 01-.75-.75V10zM14 11.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V12a.75.75 0 00-.75-.75H14z" />
+              <path fill-rule="evenodd" d="M5.75 2a.75.75 0 01.75.75V4h7V2.75a.75.75 0 011.5 0V4h.25A2.75 2.75 0 0118 6.75v8.5A2.75 2.75 0 0115.25 18H4.75A2.75 2.75 0 012 15.25v-8.5A2.75 2.75 0 014.75 4H5V2.75A.75.75 0 015.75 2zm-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25H4.75z" clip-rule="evenodd" />
+            </svg>
+          </dt>
+          <dd class="text-sm leading-6 text-stone-500"><%= time_tag Time.now %></dd>
+        </div>
+        <div class="mt-4 flex w-full flex-none gap-4 px-6">
+          <dt class="flex-none">
+            <span class="sr-only"><%= t("status") %></span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-6 fill-stone-400" aria-hidden="true">
+              <path fill-rule="evenodd" d="M1 4a1 1 0 011-1h16a1 1 0 011 1v8a1 1 0 01-1 1H2a1 1 0 01-1-1V4zm12 4a3 3 0 11-6 0 3 3 0 016 0zM4 9a1 1 0 100-2 1 1 0 000 2zm13-1a1 1 0 11-2 0 1 1 0 012 0zM1.75 14.5a.75.75 0 000 1.5c4.417 0 8.693.603 12.749 1.73 1.111.309 2.251-.512 2.251-1.696v-.784a.75.75 0 00-1.5 0v.784a.272.272 0 01-.35.25A49.043 49.043 0 001.75 14.5z" clip-rule="evenodd" />
+            </svg>
+          </dt>
+          <dd class="text-sm leading-6 text-stone-500"><%= t("cash") %></dd>
+        </div>
+      </dl>
+      <div class="mt-6 p-6 border-t border-stone-900/5">
+        <a href="#" class="text-sm leading-6 font-semibold text-stone-900"><%= t("download") %> <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    <div class="-mx-4 px-4 py-8 shadow-sm	ring-1 ring-stone-900/5 sm:rounded-3xl sm:mx-0 sm:px-8 sm:pb-14 lg:col-span-2 lg:row-span-2 lg:row-end-2 xl:px-16 xl:pb-20 xl:pt-16">
+      <h2 class="text-base font-semibold leading-6 text-stone-900">Order</h2>
+      <dl class="mt-6 grid grid-cols-1 text-sm leading-6 sm:grid-cols-2">
+        <div class="sm:pr-4">
+          <dt class="inline text-stone-500">Issued on</dt>
+          <dd class="inline text-stone-700"><%= time_tag Time.current %></dd>
+        </div>
+        <div class="mt-2 sm:mt-0 sm:pl-4">
+          <dt class="inline text-stone-500">Due on</dt>
+          <dd class="inline text-stone-700"><%= time_tag Time.current %></dd>
+        </div>
+        <div class="mt-6 pt-6 border-t border-stone-900/5">
+          <dt class="font-semibold text-stone-900">From</dt>
+          <dd class="mt-1 text-stone-500">
+            <span class="font-medium text-stone-900">Acme Inc</span>
+            <br>
+            7363 Cynthia Pass
+            <br>
+            Toronto, ON N3Y 4H8
+          </dd>
+        </div>
+        <div class="mt-8 sm:mt-6 sm:border-t sm:border-stone-900/5 sm:pl-4 sm:pt-6">
+          <dt class="font-semibold text-stone-900">To</dt>
+          <dd class="mt-1 text-stone-500">
+            <span class="font-medium text-stone-900">Acme Inc</span>
+            <br>
+            7363 Cynthia Pass
+            <br>
+            Toronto, ON N3Y 4H8
+          </dd>
+        </div>
+      </dl>
+      <table class="mt-16 w-full whitespace-nowrap text-left text-sm leading-6">
+        <colgroup>
+          <col class="w-full">
+          <col>
+          <col>
+          <col>
+        </colgroup>
+        <thead class="border-b border-stone-200 text-stone-900">
+        <tr class="">
+          <th scope="col" class="px-0 py-3 font-semibold">Products</th>
+          <th scope="col" class="hidden py-3 pl-8 pr-0 text-right font-semibold sm:table-cell_">Hours</th>
+          <th scope="col" class="py-3 pl-8 pr-0 text-right font-semibold">Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="border-b border-stone-100">
+          <td class="max-w-0 px-0 py-5 align-top">
+            <div class="truncate font-medium text-stone-900">Logo redesign</div>
+            <div class="truncate text-stone-500">New logo and digital asset playbook.</div>
+          </td>
+          <td class="hidden py-5 pl-8 pr-0 text-right align-top tabular-nums text-stone-500 sm:table-cell_">20.0</td>
+          <td class="py-5 pl-8 pr-0 text-right align-top tabular-nums text-stone-500">$2,000.00</td>
+        </tr>
+
+        <tr class="border-b border-stone-100">
+          <td class="max-w-0 px-0 py-5 align-top">
+            <div class="truncate font-medium text-stone-900">T-shirt design</div>
+            <div class="truncate text-stone-500">Three t-shirt design concepts.</div>
+          </td>
+          <td class="hidden py-5 pl-8 pr-0 text-right align-top tabular-nums text-stone-500 sm:table-cell_">20.0</td>
+          <td class="py-5 pl-8 pr-0 text-right align-top tabular-nums text-stone-500">$400.00</td>
+        </tr>
+        </tbody>
+        <tfoot class="">
+        <tr>
+          <th scope="row" class="px-0 pb-0 pt-6 font-normal text-stone-700 sm:hidden">Subtotal</th>
+          <th scope="row" colspan="1" class="hidden px-0 pb-0 pt-6 text-right font-normal text-stone-700 sm:table-cell">Subtotal</th>
+          <td class="pb-0 pl-8 pr-0 pt-6 text-right tabular-nums text-stone-900">$8,800.00</td>
+        </tr>
+        <tr>
+          <th scope="row" class="pt-4 font-semibold text-stone-900 sm:hidden">Total</th>
+          <th scope="row" colspan="1" class="hidden pt-4 text-right font-semibold text-stone-900 sm:table-cell">Total</th>
+          <td class="pb-0 pl-8 pr-0 pt-4 text-right font-semibold tabular-nums text-stone-900">$10,560.00</td>
+        </tr>
+        </tfoot>
+      </table>
+    </div>
+    <div class="lg:col-start-3">
+      <h2 class="text-sm font-semibold leading-6 text-stone-900">Activity</h2>
+      <ul role="list" class="mt-6 space-y-6">
+        <li class="relative flex gap-4">
+          <div class="absolute -bottom-6 left-0 top-0 flex w-6 justify-center">
+            <div class="bg-stone-200 w-px"></div>
+          </div>
+          <div class="relative flex w-6 h-6 flex-none items-center justify-center bg-white">
+            <div class="w-1.5 h-1.5 rounded-full bg-stone-200 ring-1 ring-stone-300"></div>
+          </div>
+          <p class="flex-auto py-0.5 text-xs leading-5 text-stone-500">
+            <span class="font-medium text-stone-900">Chelsea Hagon</span> created invoice
+          </p>
+          <%= time_tag Time.current, "7d ago", class: "flex-none py-0.5 text-xs leading-5 text-stone-500" %>
+        </li>
+        <li class="relative flex gap-4">
+          <div class="absolute -bottom-6 left-0 top-0 flex w-6 justify-center">
+            <div class="bg-stone-200 w-px"></div>
+          </div>
+          <div class="relative flex w-6 h-6 flex-none items-center justify-center bg-white">
+            <div class="w-1.5 h-1.5 rounded-full bg-stone-200 ring-1 ring-stone-300"></div>
+          </div>
+          <p class="flex-auto py-0.5 text-xs leading-5 text-stone-500">
+            <span class="font-medium text-stone-900">Chelsea Hagon</span> created invoice
+          </p>
+          <%= time_tag Time.current, "7d ago", class: "flex-none py-0.5 text-xs leading-5 text-stone-500" %>
+        </li>
+        <li class="relative flex gap-4">
+          <div class="absolute left-0 top-0 flex w-6 h-6 justify-center">
+            <div class="bg-stone-200 w-px"></div>
+          </div>
+          <div class="relative w-6 h-6 flex-none items-center justify-center bg-white">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-indigo-600	">
+              <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          <p class="flex-auto py-0.5 text-xs leading-5 text-stone-500">
+            <span class="font-medium text-stone-900">Alex Curren </span> paid the invoice.
+          </p>
+          <%= time_tag Time.current, "7d ago", class: "flex-none py-0.5 text-xs leading-5 text-stone-500" %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
